@@ -48,7 +48,6 @@ public class OrchestrationService {
         document.setProcessingTimeMs(processingTime);
         document.setGeneratedAt(LocalDateTime.now());
         document.setIsActive(true);
-        utils.saveIntermediateResult(request.getSessionId() + "_FINAL_DOCUMENT.md", request.getDocumentationContent());
         return documentRepository.save(document);
     }
 }
